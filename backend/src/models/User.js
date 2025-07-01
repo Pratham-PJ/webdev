@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
-    enail : {
+    email : {
         type : String,
         required : true,
         unique : true,
@@ -51,8 +51,6 @@ const userSchema = new mongoose.Schema({
 {timestamps:true}
 )
 
-const User = mongoose.model("User",userSchema);
-
 // pre hook
 // mean here we are going to encrypt password so that no outter member can understand it
 // to do so we have used bycrypt list
@@ -66,6 +64,10 @@ userSchema.pre("save",async function(next){
         next(error)
     }
 })
+
+const User = mongoose.model("User",userSchema);
+
+
 
 export default User;
  
