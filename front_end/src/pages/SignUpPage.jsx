@@ -4,7 +4,7 @@ import { Link } from "react-router";
 // import {useMutation, useQueryClient} from "@tanstack/react-query"
 // import { axiosInstance } from '../lib/axios';
 // import { signup } from '../lib/api.js';
-import useSignUp from '../../hooks/useSignUp.js';
+import useSignUp from '../hooks/useSignUp';
 
 const SignUpPage = () => {
   const [signupData, setSignupData] = useState({
